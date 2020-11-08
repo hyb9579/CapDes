@@ -59,6 +59,11 @@ public sealed class SeeThroughController : MonoBehaviour {
 
     #region Unity methods
 
+    private void Awake()
+    {
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
+    }
+
     void Start() {
 #if UNITY_EDITOR
         webCamTexture = new WebCamTexture();
